@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Removing Duplicates from array</title>
+    <link rel="stylesheet" href="styles/bootstrap4.css">
+</head>
+<body>
+    <header class="text-center">
+        <h1>Removing Duplicate values from an Array</h1>
+    </header>
+    <main class="container">
+        <!-- First way -->
+        <section>
+            <header>
+                <h2>1. Using new Set()</h2>
+            </header>
+            <div>
+                Original array : <span id="originalArray"></span>
+                <div>
+                    After using new Set() : <span id="out1"></span>
+                </div>
+            </div>
+            <div>
+                <pre>
+                    <code>
+const num = [1,2,3,12,1,2,2,323,2,4,4,3,3,3,4,5,56,6,55,4,4,3,333];                            
+var output1 = new Set(num);
+                    </code>
+                </pre>
+            </div>
+        </section>
+        <!-- First way -->
+        <section>
+            <header>
+                <h2>2. Using map()</h2>
+            </header>
+            <div>
+                Original array : <span id="originalNames"></span>
+                <div>
+                    After using map() : <span id="out2"></span>
+                </div>
+            </div>
+            <div>
+                <pre>
+                    <code>
+const names = ['name1','name1','name2','name2','name2','name3','name3','name3','name4','name4','name5'];                            
+const result = [];
+var output2 = names.map(i => {
+    !result.includes(i) && result.push(i);
+    return result;
+});                    </code>
+                </pre>
+            </div>
+            </section>
+        <hr>
+
+    </main>
+
+    <script src="./js/main.js"></script>
+</body>
+</html>
